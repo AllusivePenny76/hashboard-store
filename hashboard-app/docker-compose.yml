@@ -5,7 +5,7 @@ services:
       APP_HOST: hashboard-app_server_1
       APP_PORT: 7892
   server:
-    image: ghcr.io/allusivepenny76/hashboard:0.1.0
+    image: ghcr.io/allusivepenny76/hashboard:0.2.0
     restart: on-failure
     stop_grace_period: 30s
     volumes:

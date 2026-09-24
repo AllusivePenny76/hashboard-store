@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hashboard-app
 category: bitcoin
 name: Hashboard
-version: "0.1.0"
+version: "0.2.0"
 tagline: Live dashboard for your Bitcoin node and solo miners
 icon: https://raw.githubusercontent.com/allusivepenny76/hashboard-store/main/hashboard-app/icon.svg
 description: >-
@@ -26,5 +26,6 @@ defaultPassword: ""
 submitter: AllusivePenny76
 submission: https://github.com/allusivepenny76/hashboard
 releaseNotes: >-
-  Initial release. Red phosphor terminal UI, Bitaxe telemetry, Public Pool stats, node health,
-  difficulty and halving countdowns, block-lottery odds, 30 days of history.
+  0.2.0: miner event tracker (reboots with reset reason and before/after state, offline/online),
+  live ticking timers and refresh sweep, changed values flash, instant hashrate readout,
+  1-hour default chart range, multi-arch image (amd64 + arm64).
