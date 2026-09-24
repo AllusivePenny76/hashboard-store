@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: hashboard-app
+category: bitcoin
+name: Hashboard
+version: "0.1.0"
+tagline: Live dashboard for your Bitcoin node and solo miners
+icon: https://raw.githubusercontent.com/allusivepenny76/hashboard-store/main/hashboard-app/icon.svg
+description: >-
+  Hashboard puts your whole Bitcoin setup on one screen: node sync, peers by network,
+  mempool and fee estimates, the difficulty epoch and halving countdown, recent blocks,
+  your Public Pool solo-mining stats, and live telemetry from every Bitaxe on your LAN
+  (hashrate, temperature, power, efficiency, shares, best difficulty) with 30 days of history.
+  It also shows your real odds of finding a block. Everything is read-only.
+developer: AllusivePenny76
+website: https://github.com/allusivepenny76/hashboard
+dependencies:
+  - bitcoin
+  - public-pool
+repo: https://github.com/allusivepenny76/hashboard
+support: https://github.com/allusivepenny76/hashboard/issues
+port: 7892
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: AllusivePenny76
+submission: https://github.com/allusivepenny76/hashboard
+releaseNotes: >-
+  Initial release. Red phosphor terminal UI, Bitaxe telemetry, Public Pool stats, node health,
+  difficulty and halving countdowns, block-lottery odds, 30 days of history.

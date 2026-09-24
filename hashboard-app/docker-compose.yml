@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: hashboard-app_server_1
+      APP_PORT: 7892
+  server:
+    image: ghcr.io/allusivepenny76/hashboard:0.1.0
+    restart: on-failure
+    stop_grace_period: 30s
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      HASHBOARD_DATA_DIR: /data
+      BITCOIN_RPC_HOST: $APP_BITCOIN_NODE_IP
+      BITCOIN_RPC_PORT: $APP_BITCOIN_RPC_PORT
+      BITCOIN_RPC_USER: $APP_BITCOIN_RPC_USER
+      BITCOIN_RPC_PASS: $APP_BITCOIN_RPC_PASS
+      POOL_API_URL: http://public-pool_proxy_1
+      # Comma-separated Bitaxe IPs; can also be managed from the Settings dialog in the app.
+      BITAXE_HOSTS: ""
+      PRICE_ENABLED: "true"
