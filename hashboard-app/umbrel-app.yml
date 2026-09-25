@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hashboard-app
 category: bitcoin
 name: Hashboard
-version: "0.2.0"
+version: "0.3.0"
 tagline: Live dashboard for your Bitcoin node and solo miners
 icon: https://raw.githubusercontent.com/allusivepenny76/hashboard-store/main/hashboard-app/icon.svg
 description: >-
@@ -10,7 +10,8 @@ description: >-
   mempool and fee estimates, the difficulty epoch and halving countdown, recent blocks,
   your Public Pool solo-mining stats, and live telemetry from every Bitaxe on your LAN
   (hashrate, temperature, power, efficiency, shares, best difficulty) with 30 days of history.
-  It also shows your real odds of finding a block. Everything is read-only.
+  A spinning globe maps where your clearnet peers are. It also shows your real odds of
+  finding a block. Everything is read-only.
 developer: AllusivePenny76
 website: https://github.com/allusivepenny76/hashboard
 dependencies:
@@ -26,6 +27,10 @@ defaultPassword: ""
 submitter: AllusivePenny76
 submission: https://github.com/allusivepenny76/hashboard
 releaseNotes: >-
+  0.3.0: spinning peer globe inside the Node card. Clearnet peers are placed on a dot-matrix
+  world map with arcs and travelling pulses back to your node. Tor and I2P peers have no real
+  location, so they appear as hollow "estimated" markers at a stable guessed city (toggle to an
+  anonymous ring instead). Set GEO_ENABLED=false to skip the ip-api.com lookup.
   0.2.0: miner event tracker (reboots with reset reason and before/after state, offline/online),
   live ticking timers and refresh sweep, changed values flash, instant hashrate readout,
   1-hour default chart range, multi-arch image (amd64 + arm64).
